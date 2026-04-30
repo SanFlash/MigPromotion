@@ -1,0 +1,125 @@
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+  background:#0a0f1f;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  font-family:sans-serif;
+}
+
+/* 1:1 FRAME */
+#stage{
+  width:min(92vw,600px);
+  aspect-ratio:1/1;
+  position:relative;
+  overflow:hidden;
+  border-radius:18px;
+  background:radial-gradient(circle at 30% 30%, #1a2a6c, #000);
+}
+
+/* SCENES */
+.scene{
+  position:absolute;
+  inset:0;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  opacity:0;
+}
+
+/* TEXT */
+h1,h2{
+  font-size:clamp(26px,5vw,38px);
+  background:linear-gradient(90deg,#00d4ff,#ffd060,#ff4ecd);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+p{
+  color:#ccc;
+  margin-top:10px;
+}
+
+/* ===== ROLE UNIVERSE ===== */
+#roles{
+  position:absolute;
+  inset:0;
+}
+
+.role{
+  position:absolute;
+  padding:6px 12px;
+  border-radius:20px;
+  font-weight:600;
+  color:#000;
+  background:linear-gradient(135deg,#00d4ff,#ffd060,#ff4ecd);
+  white-space:nowrap;
+  opacity:0;
+  transform:scale(0.6);
+}
+
+.role.sm{font-size:10px}
+.role.md{font-size:13px}
+.role.lg{font-size:16px}
+.role.xl{font-size:20px;font-weight:800}
+
+/* ===== FLOW ===== */
+#flow{
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+  width:80%;
+  max-width:300px;
+}
+
+.flow-card{
+  padding:14px;
+  border-radius:12px;
+  background:linear-gradient(135deg,#6a5cff,#00d4ff);
+  color:white;
+  font-size:14px;
+  opacity:0;
+  transform:translateY(40px);
+}
+
+.flow-card.active{
+  box-shadow:0 0 20px rgba(0,212,255,.6);
+}
+
+/* LOGO */
+#logo{
+  width:90px;
+  position:absolute;
+  top:-70px;
+}
+
+/* TAGLINE */
+.tagline{
+  position:absolute;
+  bottom:18%;
+  color:#aaa;
+}
+
+/* CTA */
+.contact{
+  margin-top:20px;
+  padding:16px;
+  border-radius:12px;
+  background:rgba(255,255,255,.1);
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.contact-item{
+  color:#fff;
+}
+
+.contact-item a{
+  color:#00d4ff;
+  text-decoration:none;
+}
