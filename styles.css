@@ -16,7 +16,7 @@ body{
   position:relative;
   overflow:hidden;
   border-radius:18px;
-  background:radial-gradient(circle at 60% 50%, #4800F4F5, #373737DB);
+  background:radial-gradient(circle at 30% 25%, #000046, #1a2a6c,#23074d);
 }
 
 /* SCENES */
